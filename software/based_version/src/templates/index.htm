@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../static/style.css">
+	<title>Test_Version</title>
+</head>
+<body>
+	<div class="container">
+		<div class="background-container">
+			<div class="title-container">
+				<h1>Microscope Mini Online</h1>
+			</div>
+			<div class="video">
+				<img src="{{ url_for('video_feed') }}">
+			</div>
+
+			<form method="post" action="{{ url_for('tasks') }}">
+			<div class="bottons">
+				<!-- <input class="btn1" type="submit" value="Stop/Start" name="stop" /> -->
+				<input class="btn1" type="submit" value="Capture" name="click"/>
+				<!-- <input class="btn1" type="submit" value="Grey" name="grey" /> -->
+				<input class="btn1" type="submit" value="Negative" name="neg" />
+				<div>
+					<input class="btn" type="submit" value="Start/Stop Recording" name="rec" />
+				</div>
+				<div class="direction">
+					<div>
+						<input class="up-btn" type="submit" value="👆" name="up_dir" />
+					</div>
+					<div>
+						<input class="left-btn" type="submit" value="👈" name="left_dir" />
+						<input class="right-btn" type="submit" value="👉" name="right_dir" />
+					</div>
+					<div>
+						<input class="down-btn" type="submit" value="👇" name="down_dir" />
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</body>
+</html>
